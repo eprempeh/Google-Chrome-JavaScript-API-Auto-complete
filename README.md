@@ -1,4 +1,4 @@
-**Google-Chrome-JavaScript-API-Auto-complete**
+##Google-Chrome-JavaScript-API-Auto-complete
 
 Offer Google Chrome JavaScript API auto-complete for sublime text.
 
