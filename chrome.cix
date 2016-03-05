@@ -1,0 +1,371 @@
+<scope ilk="Object" name="chrome">   
+    <scope ilk="Object" name="accessibilityFeatures">
+       <variable name="spokenFeedback" /> 
+       <variable name="largeCursor" /> 
+       <variable name="stickyKeys" /> 
+       <variable name="highContrast" /> 
+       <variable name="screenMagnifier" /> 
+       <variable name="autoclick" /> 
+       <variable name="virtualKeyboard" /> 
+       <variable name="animationPolicy" />               
+    </scope>
+
+    <scope ilk="Object" name="alarms">
+
+      <scope ilk="function" name="create" signature="function(name,alarmInfo)">
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="alarmInfo" />
+      </scope>
+
+      <scope ilk="function" name="get" signature="function(name,callback)">
+        <variable ilk="argument" name="name" />
+        <variable ilk="argument" name="callback"/>
+      </scope>
+
+      <scope ilk="function" name="getAll" signature="function(callback)">
+        <variable ilk="argument" name="callback"/>
+      </scope>
+
+      <scope ilk="function" name="clear" signature="function(name,callback)">
+        <variable ilk="argument" name="name"/>
+        <variable ilk="argument" name="callback"/>
+      </scope>
+
+      <scope ilk="function" name="clearAll" signature="function(callback)">    
+          <variable ilk="argument" name="callback"/>
+      </scope>
+                  
+      <scope classrefs="Events" ilk="class" name="onAlarm">              
+      </scope>      
+    </scope>     
+
+    <scope ilk="Object" name="bookmarks">
+      <variable name="MAX_WRITE_OPERATIONS_PER_HOUR" />  
+      <variable name="MAX_SUSTAINED_WRITE_OPERATIONS_PER_MINUTE" />  
+      <scope ilk="function" name="get" signature="function(idOrIdList,callback)">
+          <variable ilk="argument" name="idOrIdList" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="getChildren" signature="function(id,callback)">
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="getRecent" signature="function(numberOfItems,callback)">
+          <variable ilk="argument" name="numberOfItems" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="getTree" signature="function(callback)">                  
+          <variable ilk="argument" name="callback" />
+      </scope>
+       <scope ilk="function" name="getSubTree" signature="function(id,callback)">
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="search" signature="function(query,callback)">
+          <variable ilk="argument" name="query" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="create" signature="function(bookmark,callback)">
+          <variable ilk="argument" name="bookmark" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="move" signature="function(id,destination,callback)">
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="destination" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="update" signature="function(id,destination,callback)">
+          <variable ilk="argument" name="id" />
+          <variable ilk="argument" name="destination" />
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="remove" signature="function(id,callback)">
+          <variable ilk="argument" name="id" />          
+          <variable ilk="argument" name="callback" />
+      </scope>
+      <scope ilk="function" name="removeTree" signature="function(id,callback)">
+          <variable ilk="argument" name="id" />                  
+          <variable ilk="argument" name="callback" />
+      </scope>             
+      <scope classrefs="Events" ilk="class" name="onCreated">              
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onRemoved"> 
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onChanged"> 
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onMoved"> 
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onChildrenReordered"> 
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onImportBegan">              
+      </scope>
+      <scope classrefs="Events" ilk="class" name="onImportEnded">              
+      </scope>
+    </scope>
+
+    <scope ilk="Object" name="browserAction">
+
+      <scope ilk="function" name="setTitle" signature="function(details)">
+        <variable ilk="argument" name="details" /> 
+      </scope>
+      <scope  ilk="function" name="getTitle" signature="function(details,callback)">
+        <variable ilk="argument" name="details" /> 
+        <variable ilk="argument" name="callback" /> 
+      </scope>
+
+      <scope ilk="function" name="setPopup" signature="function(details)">
+        <variable ilk="argument" name="details" /> 
+      </scope>
+      <scope  ilk="function" name="getPopup" signature="function(details,callback)" >
+        <variable ilk="argument" name="details" /> 
+        <variable ilk="argument" name="callback" /> 
+      </scope>
+
+      <scope  ilk="function" name="setIcon" signature="function(details,callback)" >
+        <variable ilk="argument" name="details" /> 
+        <variable ilk="argument" name="callback" /> 
+      </scope>
+      
+
+      <scope ilk="function" name="setBadgeText" signature="function(details)">
+        <variable ilk="argument" name="details" /> 
+      </scope>
+      <scope  ilk="function" name="getBadgeText" signature="function(details,callback)">
+        <variable ilk="argument" name="details" /> 
+        <variable ilk="argument" name="callback" /> 
+      </scope>
+
+      <scope ilk="function" name="setBadgeBackgroundColor" signature="function(details)">
+        <variable ilk="argument" name="details" /> 
+      </scope>
+      <scope  ilk="function" name="getBadgeBackgroundColor" signature="function(details,callback)">
+        <variable ilk="argument" name="details" /> 
+        <variable ilk="argument" name="callback" /> 
+      </scope>
+      <scope ilk="function" name="enable" signature="function(tabId)">
+        <variable ilk="argument" name="tabId" /> 
+      </scope>
+
+      <scope ilk="function" name="disable" signature="function(tabId)">
+        <variable ilk="argument" name="tabId" /> 
+      </scope>
+
+      <!-- TODO :  -->
+      <!-- use centralized version -->
+       <scope classrefs="Events" ilk="class" name="onClicked">        
+      </scope>                                                                
+    </scope>    
+
+    <scope ilk="Object" name="browsingData">
+        <scope ilk="function" signature="function(function callback)" name="settings">
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, DataTypeSet dataToRemove, function callback)" name="remove">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="dataToRemove" citdl="DataTypeSet"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeAppcache">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeCache">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeCookies">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeDownloads">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeFileSystems">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeFormData">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeHistory">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeIndexedDB">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeLocalStorage">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removePluginData">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removePasswords">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function( RemovalOptions options, function callback)" name="removeWebSQL">
+            <variable ilk="argument" name="options" citdl="RemovalOptions"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+    </scope>
+
+    <scope ilk="Object" name="certificateProvider">
+        <scope classrefs="Events" ilk="class" name="onCertificatesRequested"></scope>
+        <scope classrefs="Events" ilk="class" name="onSignDigestRequested"></scope>
+    </scope>
+
+    <scope ilk="Object" name="commands">      
+      <scope ilk="function" signature="function(function callback)" name="getAll">
+          <variable ilk="argument" name="callback" citdl="function"/>
+      </scope> 
+      <scope classrefs="Events" ilk="class" name="onCommand"></scope>
+    </scope>
+
+    <scope ilk="Object" name="contentSettings">            
+    </scope>
+
+    <scope ilk="Object" name="contextMenus">                  
+
+        <variable name="ACTION_MENU_TOP_LEVEL_LIMIT"/>              
+
+        <scope ilk="function" signature="function(object createProperties, function callback)" name="create">
+        <variable ilk="argument" name="createProperties" citdl="object"/>
+        <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(integer or string id, object updateProperties, function callback)" name="update">
+            <variable ilk="argument" name="or" citdl="integer"/>
+            <variable ilk="argument" name="updateProperties" citdl="object"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(integer or string menuItemId, function callback)" name="remove">
+            <variable ilk="argument" name="or" citdl="integer"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(function callback)" name="removeAll">
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope classrefs="Events" ilk="class" name="onClicked"></scope>       
+    </scope>
+
+    <scope ilk="Object" name="cookies">
+        <scope ilk="function" signature="function(object details, function callback)" name="get">
+          <variable ilk="argument" name="details" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(object details, function callback)" name="getAll">
+          <variable ilk="argument" name="details" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(object details, function callback)" name="set">
+          <variable ilk="argument" name="details" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(object details, function callback)" name="remove">
+          <variable ilk="argument" name="details" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(function callback)" name="getAllCookieStores">
+          <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope classrefs="Events" ilk="class" name="onChanged"></scope>
+    </scope>
+
+    <scope ilk="Object" name="debugger">
+        <scope ilk="function" signature="function(Debuggee target, string requiredVersion, function callback)" name="attach">
+            <variable ilk="argument" name="target" citdl="Debuggee"/>
+            <variable ilk="argument" name="requiredVersion" citdl="string"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(Debuggee target, function callback)" name="detach">
+            <variable ilk="argument" name="target" citdl="Debuggee"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(Debuggee target, string method, object commandParams, function callback)" name="sendCommand">
+            <variable ilk="argument" name="target" citdl="Debuggee"/>
+            <variable ilk="argument" name="method" citdl="string"/>
+            <variable ilk="argument" name="commandParams" citdl="object"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(function callback)" name="getTargets">
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope classrefs="Events" ilk="class" name="onEvent"></scope>
+        <scope classrefs="Events" ilk="class" name="onDetach"></scope>
+    </scope>
+
+    <scope ilk="Object" name="declarativeContent">
+        <scope classrefs="Events" ilk="class" name="onPageChanged"></scope>
+    </scope>
+
+    <scope ilk="Object" name="desktopCapture">
+        <scope ilk="function" signature="function(array of DesktopCaptureSourceType sources, tabs.Tab targetTab, function callback)" name="chooseDesktopMedia">
+            <variable ilk="argument" name="of" citdl="array"/>
+            <variable ilk="argument" name="targetTab" citdl="tabs.Tab"/>
+            <variable ilk="argument" name="callback" citdl="function"/>
+        </scope>
+        <scope ilk="function" signature="function(integer desktopMediaRequestId)" name="cancelChooseDesktopMedia">
+            <variable ilk="argument" name="desktopMediaRequestId" citdl="integer"/>
+        </scope>
+    </scope>
+
+
+    <scope ilk="Object" name="devtools">
+        <scope ilk="Object" name="inspectedWindow">
+          
+        </scope>     
+    </scope>
+
+    <scope ilk="Object" name="downloads">
+
+          <scope ilk="function" signature="function(object options, function callback)" name="download"><variable ilk="argument" name="options" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(object query, function callback)" name="search"><variable ilk="argument" name="query" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, function callback)" name="pause"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, function callback)" name="resume"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, function callback)" name="cancel"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, object options, function callback)" name="getFileIcon"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="options" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId)" name="open"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId)" name="show"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          </scope>
+          <scope ilk="function" signature="function()" name="showDefaultFolder"></scope>
+          <scope ilk="function" signature="function(object query, function callback)" name="erase"><variable ilk="argument" name="query" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, function callback)" name="removeFile"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId, function callback)" name="acceptDanger"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(integer downloadId)" name="drag"><variable ilk="argument" name="downloadId" citdl="integer"/>
+          </scope>
+          <scope ilk="function" signature="function(boolean enabled)" name="setShelfEnabled"><variable ilk="argument" name="enabled" citdl="boolean"/>
+          </scope>
+
+
+          <scope classrefs="Events" ilk="class" name="onCreated"></scope>
+          <scope classrefs="Events" ilk="class" name="onErased"></scope>
+          <scope classrefs="Events" ilk="class" name="onChanged"></scope>
+          <scope classrefs="Events" ilk="class" name="onDeterminingFilename"></scope>              
+    </scope>          
+
+</scope>
