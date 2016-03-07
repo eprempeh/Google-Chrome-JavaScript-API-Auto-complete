@@ -366,6 +366,10 @@
           <scope classrefs="Events" ilk="class" name="onErased"></scope>
           <scope classrefs="Events" ilk="class" name="onChanged"></scope>
           <scope classrefs="Events" ilk="class" name="onDeterminingFilename"></scope>              
-    </scope>          
+    </scope>       
+    <scope ilk="Object" name="extension">
+        <variable name="lastError"/>
+        <variable name="inIncognitoContext" />
+    </scope>
 
 </scope>
