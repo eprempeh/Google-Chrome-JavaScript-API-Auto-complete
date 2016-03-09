@@ -141,8 +141,8 @@ Here is the list of already implemented API objects :
 * declarativeContent
 	* onPageChanged &#x2714;
 * desktopCapture
-	* chooseDesktopMedia
-	* cancelChooseDesktopMedia
+	* chooseDesktopMedia &#x2714;
+	* cancelChooseDesktopMedia &#x2714;
 
 
 
