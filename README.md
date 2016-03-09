@@ -84,6 +84,70 @@ Here is the list of already implemented API objects :
 	* enable &#x2714;
 	* disable &#x2714;
 	* onClicked &#x2714;
+* browsingData
+	* settings &#x2714;
+	* remove &#x2714;
+	* removeAppcache &#x2714;
+	* removeCache &#x2714;
+	* removeCookies &#x2714;
+	* removeDownloads &#x2714;
+	* removeFileSystems &#x2714;
+	* removeFormData &#x2714;
+	* removeHistory &#x2714;
+	* removeIndexedDB &#x2714;
+	* removeLocalStorage &#x2714;
+	* removePluginData &#x2714;
+	* removePasswords &#x2714;
+	* removeWebSQL &#x2714;
+* certificateProvider
+	* onCertificatesRequested &#x2714;
+	* onSignDigestRequested &#x2714;
+* commands 
+	* getAll &#x2714;
+	* onCommand &#x2714;
+* contentSettings	
+	* cookies &#x2714;
+	* images &#x2714;
+	* javascript &#x2714;
+	* location &#x2714;
+	* plugins &#x2714;
+	* popups &#x2714;
+	* notifications &#x2714;
+	* fullscreen &#x2714;
+	* mouselock &#x2714;
+	* unsandboxedPlugins &#x2714;
+	* automaticDownloads &#x2714;
+* contextMenus
+	* ACTION_MENU_TOP_LEVEL_LIMIT &#x2714;
+	* create &#x2714;
+	* update &#x2714;
+	* remove &#x2714;
+	* removeAll &#x2714;
+	* onClicked &#x2714;
+* cookies 
+	* get  &#x2714;
+	* getAll  &#x2714;
+	* set  &#x2714;
+	* remove  &#x2714;
+	* getAllCookieStores  &#x2714;
+	* onChanged  &#x2714;
+* debugger
+	* attach &#x2714;
+	* detach &#x2714;
+	* sendCommand &#x2714;
+	* getTargets &#x2714;
+	* onEvent &#x2714;
+	* onDetach &#x2714;
+* declarativeContent
+	* onPageChanged &#x2714;
+* desktopCapture
+	* chooseDesktopMedia
+	* cancelChooseDesktopMedia
+
+
+
+
+
 
 
 The rest of the objects will be added in the near future so stay tuned :).

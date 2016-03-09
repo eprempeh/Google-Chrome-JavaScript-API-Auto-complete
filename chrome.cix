@@ -227,7 +227,18 @@
       <scope classrefs="Events" ilk="class" name="onCommand"></scope>
     </scope>
 
-    <scope ilk="Object" name="contentSettings">            
+    <scope ilk="Object" name="contentSettings">     
+      <variable name="cookies" />
+      <variable name="images" />
+      <variable name="javascript" />
+      <variable name="location" />
+      <variable name="plugins" />
+      <variable name="popups" />
+      <variable name="notifications" />
+      <variable name="fullscreen" />
+      <variable name="mouselock" />
+      <variable name="unsandboxedPlugins" />
+      <variable name="automaticDownloads" />      
     </scope>
 
     <scope ilk="Object" name="contextMenus">                  
@@ -235,8 +246,8 @@
         <variable name="ACTION_MENU_TOP_LEVEL_LIMIT"/>              
 
         <scope ilk="function" signature="function(object createProperties, function callback)" name="create">
-        <variable ilk="argument" name="createProperties" citdl="object"/>
-        <variable ilk="argument" name="callback" citdl="function"/>
+          <variable ilk="argument" name="createProperties" citdl="object"/>
+          <variable ilk="argument" name="callback" citdl="function"/>
         </scope>
         <scope ilk="function" signature="function(integer or string id, object updateProperties, function callback)" name="update">
             <variable ilk="argument" name="or" citdl="integer"/>
@@ -304,12 +315,12 @@
     </scope>
 
     <scope ilk="Object" name="desktopCapture">
-        <scope ilk="function" signature="function(array of DesktopCaptureSourceType sources, tabs.Tab targetTab, function callback)" name="chooseDesktopMedia">
-            <variable ilk="argument" name="of" citdl="array"/>
+        <scope ilk="function" signature="function(sources,targetTab,callback)" name="chooseDesktopMedia">
+            <variable ilk="argument" name="sources" citdl="array"/>
             <variable ilk="argument" name="targetTab" citdl="tabs.Tab"/>
             <variable ilk="argument" name="callback" citdl="function"/>
         </scope>
-        <scope ilk="function" signature="function(integer desktopMediaRequestId)" name="cancelChooseDesktopMedia">
+        <scope ilk="function" signature="function(desktopMediaRequestId)" name="cancelChooseDesktopMedia">
             <variable ilk="argument" name="desktopMediaRequestId" citdl="integer"/>
         </scope>
     </scope>
@@ -317,6 +328,7 @@
 
     <scope ilk="Object" name="devtools">
         <scope ilk="Object" name="inspectedWindow">
+
           
         </scope>     
     </scope>
