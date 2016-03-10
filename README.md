@@ -143,6 +143,13 @@ Here is the list of already implemented API objects :
 * desktopCapture
 	* chooseDesktopMedia &#x2714;
 	* cancelChooseDesktopMedia &#x2714;
+* devtools
+	* inspectedWindow  &#x2714;
+	* eval &#x2714;
+	* reload &#x2714;
+	* getResources &#x2714;
+	* onResourceAdded &#x2714;
+	* onResourceContentCommitted &#x2714;
 
 
 

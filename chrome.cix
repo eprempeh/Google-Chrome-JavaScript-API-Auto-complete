@@ -324,15 +324,26 @@
             <variable ilk="argument" name="desktopMediaRequestId" citdl="integer"/>
         </scope>
     </scope>
-
-
+    
     <scope ilk="Object" name="devtools">
         <scope ilk="Object" name="inspectedWindow">
-
-          
+          <variable name="tabId"/>
+          <scope ilk="function" signature="function(expression, options,callback)" name="eval">
+              <variable ilk="argument" name="expression"/>
+              <variable ilk="argument" name="options" />
+              <variable ilk="argument" name="callback" citdl="function"/>
+          </scope>
+          <scope ilk="function" signature="function(reloadOptions)" name="reload">
+              <variable ilk="argument" name="reloadOptions"/>              
+          </scope>
+          <scope ilk="function" signature="function(callback)" name="getResources">
+              <variable ilk="argument" name="callback" citdl="function"/>              
+          </scope>                            
+          <scope classrefs="Events" ilk="class" name="onResourceAdded"></scope>
+          <scope classrefs="Events" ilk="class" name="onResourceContentCommitted"></scope>
         </scope>     
     </scope>
-
+    
     <scope ilk="Object" name="downloads">
 
           <scope ilk="function" signature="function(object options, function callback)" name="download"><variable ilk="argument" name="options" citdl="object"/>
