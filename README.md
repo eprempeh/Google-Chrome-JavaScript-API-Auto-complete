@@ -25,7 +25,8 @@ Offer Google Chrome JavaScript API auto-complete for sublime text.
     // here add chrome.cix content(this line should be removed, asit is here for guidance purposes only)
 ```
 
-*Restart sublime text and now you are ready to go*.
+**Restart sublime text and now you are ready to go**.
+
 
 
 
